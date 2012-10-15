@@ -1,0 +1,684 @@
+/*
+Theme Name: Dark Pink - Portfolio
+Theme URI: http://wordpress.org/extend/themes/twentyeleven
+Author: Maximilien Dethier
+Author URI: http://wordpress.org/
+Description: Portfolio - mon thème
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentyeleven
+*/
+
+/*_____Variables______*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ____________Règles Générales____________ */
+html {
+  height: 100%;
+  font-family: Georgia,Serif;
+}
+body {
+  background-image: url("../images/skewedPrint.png");
+  height: 104%;
+}
+a {
+  text-decoration: none;
+  color: #9f111b;
+}
+a:hover {
+  color: white;
+}
+#symbol {
+  margin-top: 35px;
+  margin-left: 40px;
+  text-indent: -400px;
+  display: block;
+  height: 130px;
+  width: 129px;
+  background-image: url(../images/symbol.png);
+}
+#symbol:hover {
+  background-position: 129px 0;
+}
+#mainBlock {
+  position: relative;
+  margin-top: 205px;
+  margin-left: 30px;
+  padding: 20px;
+  float: left;
+  min-width: 550px;
+  width: 40%;
+  max-width: 750px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#disclaimer {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 25px;
+  background-color: black;
+}
+h1 {
+  text-shadow: 0 0 5px #BBBBBB;
+  font-family: 'Crete Round', serif;
+  line-height: 128%;
+  font-size: 30px;
+  color: #EEEEEE;
+  display: block;
+  width: 450px;
+  height: 110px;
+  position: absolute;
+  top: -160px;
+  left: 20px;
+  background-image: url("../images/backDisclaimer.png");
+}
+#container {
+  float: left;
+  position: relative;
+  width: 24%;
+  min-width: 260px;
+  height: 100%;
+}
+#mainNav {
+  float: right;
+  width: 210px;
+  background-image: url("../images/backNav.png");
+  height: 100%;
+}
+#mainNav ul {
+  margin-top: 31px;
+}
+#mainNav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 20px;
+}
+#mainNav li {
+  padding-top: 10px;
+  display: block;
+}
+li#currentPage a {
+  background-color: #9f111b;
+}
+#mainNav li a {
+  position: relative;
+  margin: auto;
+  width: 160px;
+  text-shadow: 0 0 5px #BBBBBB;
+  font-family: 'Crete Round', serif;
+  font-size: 24px;
+  color: #EEEEEE;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  display: block;
+}
+#mainNav li#currentPage a:before {
+  content: url("../images/clockWork.png");
+  position: absolute;
+  top: 22px;
+  left: 15px;
+}
+#mainNav li a:hover {
+  background-color: #646060;
+}
+/* ____________Home____________ */
+#home h1 {
+  padding-top: 20px;
+}
+#home h2 {
+  font-size: 26px;
+}
+#home h2:after {
+  content: url("../images/separationBar.png");
+  display: block;
+  max-width: 700px;
+}
+#clear {
+  clear: both;
+}
+#linkPort,
+#linkContact,
+#linkComp,
+#linkBlog {
+  line-height: 110%;
+  position: relative;
+  color: white;
+  float: left;
+  width: 46%;
+  margin: 0 4%;
+}
+#linkPort {
+  margin-left: 0%;
+  margin-top: 0%;
+}
+#linkComp {
+  margin-right: 0%;
+  margin-top: 0%;
+}
+#linkBlog {
+  margin-right: 0%;
+}
+#linkContact {
+  margin-left: 0%;
+}
+#linkContact,
+#linkBlog {
+  margin-top: 47px;
+}
+#home #mainBlock a {
+  line-height: 100%;
+  margin-bottom: 25px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0 0 12px #c61a1a;
+  font-family: 'Crete Round', serif;
+  font-size: 24px;
+  color: #9f111b;
+}
+#home #mainBlock a:hover {
+  position: relative;
+  top: -2px;
+  color: white;
+  text-shadow: 0 0 12px #EEEEEE;
+}
+/* ___________Portfolio____________ */
+#portfolio article {
+  width: 46%;
+  margin: 0 4%;
+  float: left;
+}
+#firstRow article {
+  margin-left: 0;
+}
+#firstRow article + article {
+  margin-left: 4%;
+  margin-right: 0;
+}
+#secondRow article {
+  margin-left: 0;
+}
+#secondRow article + article {
+  margin-left: 4%;
+  margin-right: 0;
+}
+#portfolio article img {
+  border: 3px solid #9f111b;
+  margin-bottom: 28px;
+}
+#portfolio article img:hover {
+  border: 3px solid #646060;
+}
+h2 {
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #BBBBBB;
+  font-family: 'Crete Round', serif;
+  font-size: 20px;
+  color: #EEEEEE;
+}
+#containerGallery {
+  z-index: 1;
+  position: relative;
+}
+#containerGallery + p {
+  z-index: 0;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+#RSS {
+  position: absolute;
+  right: -230px;
+  top: -20px;
+}
+#RSS a {
+  position:relative;
+  width: 170px;
+  padding: 10px 0;
+  padding-left: 11px;
+  text-align: center;
+  text-shadow: 0 0 5px #BBBBBB;
+  font-family: 'Crete Round', serif;
+  color: white;
+  font-size: 20px;
+  background-color: #9f111b;
+  display: inline-block;
+}
+#RSS h3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 160px;
+  margin: 15px 0;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 5px #BBBBBB;
+  font-family: 'Crete Round', serif;
+  padding: 10px;
+  line-height: 110%;
+  font-size: 18px;
+  margin-top: 95px;
+}
+#RSS ul li a {
+  margin-bottom: 10px;
+}
+#iconRSS {
+  position: relative;
+  right: 12px;
+  top: 3px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url(../images/iconset.png);
+  background-position: -44px 0px;
+}
+#RSS a:hover {
+  background-color: #646060;
+}
+
+#portfolio #iconFB,
+#portfolio #iconTwitter,
+#portfolio #iconLink {
+top:8px;
+left:7px;
+}
+
+#portfolio #iconLink
+{
+top:10px;
+}
+
+/* ___________Contact____________ */
+
+#contact h2 {
+  margin-top: 0;
+}
+#infos {
+  position: relative;
+}
+#separateur {
+  clear: both;
+  background-image: url("../images/separationBar.png");
+  width: 400px;
+  height: 10px;
+  margin: auto;
+  position: relative;
+  top: 20px;
+}
+#adresseLettre,
+#adresseWeb {
+  width: 50%;
+  float: left;
+  color: white;
+}
+#adresseLettre span {
+  font-size: 18px;
+  line-height:130%;
+}
+
+#adresseLettre h2 {
+  margin-bottom: 20px;
+}
+#adresseWeb li {
+  margin-bottom: 20px;
+}
+#adresseWeb ul {
+  margin-top: 22px;
+  position: relative;
+  left:30px;
+}
+#adresseWeb ul a {
+  position: relative;
+}
+
+.phone
+{
+position:relative;
+display:block;
+top:36px;
+}
+
+#iconMail,
+#iconFB,
+#iconTwitter,
+#iconLink {
+  background-image: url(../images/iconset.png);
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: -2px;
+  left: -30px;
+}
+#iconTwitter {
+  background-position: 0px 22px;
+}
+#iconMail {
+  background-position: -22px 0px;
+}
+#iconLink {
+  background-position: 22px 0px;
+}
+form {
+  font-family: Georgia,Serif;
+  padding-bottom: 45px;
+  position: relative;
+  top: 50px;
+  clear: both;
+  margin: auto;
+}
+form h2 {
+  position: relative;
+  top: 0px;
+  margin: 22px 0;
+}
+label {
+  color: white;
+  font-size: 16px;
+}
+input,
+textarea {
+  font-family: Georgia,Serif;
+  border: none;
+  display: block;
+  font-size: 15px;
+  color: white;
+  margin-top: 5px;
+  
+  background-color: #646060;
+  border-top:2px #444444 solid;
+  border-left:2px #444444 solid;
+}
+textarea {
+  padding: 3px;
+  width: 95%;
+  height: 80px;
+  display: block;
+}
+#formLeft {
+  width: 45%;
+  margin-right: 5%;
+  float: left;
+}
+
+#formRight{
+width:50%;
+float:left;
+}
+
+#submit {
+  font-family: Georgia;
+  padding: 2px 5px;
+}
+#submit:hover {
+  color: #9f111b;
+  background-color: #DDDDDD;
+  padding: 2px 5px;
+}
+#nom {
+  padding: 3px;
+  width: 150px;
+}
+#mail {
+  padding: 3px;
+  width: 200px;
+}
+/* ___________Blog____________ */
+#blog h2 {
+  margin-bottom: 13px;
+}
+#blog p {
+  line-height: 114%;
+  color: white;
+}
+#blog article {
+  position: relative;
+  margin-bottom:50px;
+}
+.imageArticle {
+  display: block;
+  border: 3px solid #9f111b;
+  margin-bottom: 70px;
+  margin-top: 10px;
+}
+article + article .imageArticle {
+  margin-bottom: 0px;
+}
+.imageArticle:hover {
+  border: 3px solid #646060;
+}
+.date {
+  color: white;
+  display:block;
+}
+
+.attachment-post-thumbnail
+{
+margin:10px 0;
+}
+
+.articleFloat
+{
+float:right;
+width:45%;
+}
+
+.contenuArticle {
+  min-width: 200px;
+  width: 40%;
+  float: left;
+}
+
+#blog #separateur {
+  position: relative;
+  top: -20px;
+  margin-bottom: 30px;
+}
+
+#blog #iconFB,
+#blog #iconTwitter,
+#blog #iconLink {
+top:8px;
+left:7px;
+}
+
+#blog #iconLink
+{
+top:10px;
+}
+
+/* ___________Expérience____________ */
+#about {
+  font-size: 18px;
+  line-height: 122%;
+  color: white;
+  float: left;
+  width: 67%;
+}
+#side li {
+  list-style-image: url('../images/check.png');
+}
+#side ul {
+  position: relative;
+  left: 17px;
+  margin: auto;
+  width: 90px;
+}
+#comp h2 {
+  margin-bottom: 12px;
+}
+#side h2 {
+  width: 110px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+#side ul + ul {
+  margin-top: 30px;
+}
+#side {
+  color: white;
+  float: left;
+  width: 33%;
+}
+
+/* ___________Blog - Features____________ */
+
+#nav-single
+{
+margin-bottom:20px;
+position:absolute;
+right:10px;
+z-index:2;
+}
+
+.post 
+{
+color:white;
+}
+
+.entry-content
+{
+float:right;
+width:45%;
+}
+
+.entry-meta
+{
+margin-bottom:10px;
+}
+
+.edit-link
+{
+float:right;
+}
+
+.assistive-text
+{
+color:white;
+}
